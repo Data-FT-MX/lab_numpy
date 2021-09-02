@@ -140,6 +140,7 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+f=np.empty((2,3,5))
 arreglo=0
 for i in d:
     fila=0
