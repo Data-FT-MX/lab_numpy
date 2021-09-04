@@ -81,8 +81,25 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 
+d_reshaped = d.reshape(30)
+print(d_reshaped)
 
+for i in range(len(d_reshaped)):
+    if d_reshaped[i] > d_min and d_reshaped[i] < d_mean:
+        f_r[i] = 25
+    if d_reshaped[i] > d_mean and d_reshaped[i] < d_max:
+        f_r[i] = 75
+    if d_reshaped[i] == d_mean:
+        f_r[i] = 50
+    if d_reshaped[i] == d_min:
+        f_r[i] = 0
+    if d_reshaped[i] == d_max:
+        f_r[i] = 100
 
+print(f_r)
+
+f = f_r.reshape((2, 3, 5))
+print(f)
 
 """
 #17. Print d and f. Do you have your expected f?
@@ -105,6 +122,8 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
 """
 
+print(d)
+print(f)
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
